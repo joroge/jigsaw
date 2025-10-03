@@ -657,8 +657,7 @@
                         // Set background image
                         piece.style.backgroundImage = `url(${puzzleImage.src})`;
                         piece.style.backgroundSize = `${currentGridSize * 100}% ${currentGridSize * 100}%`;
-                        piece.style.backgroundPosition = `${-sourceCol * (100 / (currentGridSize - 1))}% ${-sourceRow * (100 / (currentGridSize - 1))}%`;
-
+                        piece.style.backgroundPosition = `${(sourceCol / (currentGridSize - 1)) * 100}% ${(sourceRow / (currentGridSize - 1)) * 100}%`;
                         // Add click listener
                         piece.addEventListener('click', () => handlePieceClick(row, col));
                     }
